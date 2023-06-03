@@ -22,13 +22,13 @@ def get_weather(message):
 
         img = ''
         if temp >= 0 and temp < 10:
-            img = 'suncloud.jpeg'
+            img = 'images/suncloud.jpeg'
         elif temp > 10:
-            img = 'sun.png'
+            img = 'images/sun.png'
         elif temp < 0 and temp >= -10:
-            img = 'rain.png'
+            img = 'images/rain.png'
         elif temp < -11:
-            img = 'snow.png'
+            img = 'images/snow.png'
         file = open('./' + img, 'rb')
         text = f"Погода в {data['name']}: {temp} градусов."
         bot.send_photo(message.chat.id, file)
